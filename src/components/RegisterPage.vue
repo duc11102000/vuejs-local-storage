@@ -150,6 +150,7 @@ export default {
         }
 
         this.users.push(user);
+        // lữu dữ liệu dưới local
         localStorage.setItem('user', JSON.stringify(this.users));
       }
 
