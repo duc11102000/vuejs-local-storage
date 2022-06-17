@@ -8,7 +8,7 @@
               <div class="card-title"><h1>Login User</h1></div>
             </div>
             <div class="card-body">
-              <form>
+              <form @submit.prevent="loginUser">
                 <div class="form-group">
                   <input
                     type="text"
@@ -39,7 +39,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      name: ''
+    }
+  },
+
+  methods: {
+    loginUsers() {
+      console.log(this.name);
+    }
+  }
+};
 </script>
 
 <style scoped>

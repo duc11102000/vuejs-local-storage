@@ -81,6 +81,7 @@
                         class="form-check-input"
                         name="optradio"
                         checked
+                        v-model="gender"
                       />Male
                     </label>
                   </div>
@@ -90,6 +91,7 @@
                         type="radio"
                         class="form-check-input"
                         name="optradio"
+                        v-model="gender"
                       />Female
                     </label>
                   </div>
@@ -140,8 +142,15 @@ export default {
         this.errors = errors;
       } else {
         this.errors = {};
+
+        // Refresh lại ko mất local data
+        if(localStorage.users) {
+          let lsUser = localStorage.users;
+          this.users = JSON.parse(lsUser);
+        }
+
         this.users.push(user);
-        localStorage.setItem('user')
+        localStorage.setItem('user', JSON.stringify(this.users));
       }
 
     },
