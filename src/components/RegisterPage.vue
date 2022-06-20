@@ -5,10 +5,10 @@
         <div class="col-sm-12 col-md-8 col-lg-6">
           <div class="card">
             <div class="card-header">
-              <div class="card-title"><h1>Register</h1></div>
+              <h1>Register</h1>
             </div>
             <div class="card-body">
-              <form @submit.prevent="registerUser">
+              <form novalidate @submit.prevent="registerUser">
                 <div class="form-group">
                   <input
                     type="text"
@@ -81,7 +81,6 @@
                         class="form-check-input"
                         name="optradio"
                         checked
-                        v-model="gender"
                       />Male
                     </label>
                   </div>
@@ -91,7 +90,6 @@
                         type="radio"
                         class="form-check-input"
                         name="optradio"
-                        v-model="gender"
                       />Female
                     </label>
                   </div>
@@ -119,7 +117,6 @@ export default {
       email: "",
       fullName: "",
       address: "",
-      gender: "",
       errors: {},
       users: [],
     };
@@ -134,7 +131,6 @@ export default {
         email: this.email,
         fullName: this.fullName,
         address: this.address,
-        gender: this.gender
       };
 
       const { isInvalid, errors } = validateRegisterInput(user);
@@ -144,16 +140,21 @@ export default {
         this.errors = {};
 
         // Refresh lại ko mất local data
-        if(localStorage.users) {
+        if (localStorage.users) {
           let lsUser = localStorage.users;
           this.users = JSON.parse(lsUser);
         }
 
         this.users.push(user);
         // lữu dữ liệu dưới local
-        localStorage.setItem('user', JSON.stringify(this.users));
+        localStorage.setItem("user", JSON.stringify(this.users));
+        this.username = '';
+        this.password = '';
+        this.password2 = '';
+        this.email = '';
+        this.fullName = '';
+        this.address = '';
       }
-
     },
   },
 };
@@ -176,5 +177,6 @@ export default {
   display: flex;
   justify-content: center;
   align-content: center;
+  border: none;
 }
 </style>

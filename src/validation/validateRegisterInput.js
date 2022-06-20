@@ -5,6 +5,15 @@ const validateRegisterInput = (data) => {
 
     const {username, password, password2, email, fullName, address} = data
 
+    if (localStorage.users) {
+        let lsUsers = localStorage.users;
+        lsUsers = JSON.parse(lsUsers);
+        let index = lsUsers.findIndex((user) => user.username === username);
+        if (index > -1) {
+          errors.username = "Username already exists!";
+        }
+      }
+
     if(validator.isEmpty(username)){
         errors.username = "User name field is required";
     }
@@ -23,6 +32,10 @@ const validateRegisterInput = (data) => {
 
     if(validator.isEmpty(email)){
         errors.email = 'Email field is required';
+    }
+
+    if(!validator.isEmail(email)) {
+        errors.email = 'Please enter valid email';
     }
 
     if(validator.isEmpty(fullName)){
