@@ -79,7 +79,6 @@
                       <input
                         type="radio"
                         class="form-check-input"
-                        name="optradio"
                         checked
                       />Male
                     </label>
@@ -148,13 +147,13 @@ export default {
         this.users.push(user);
         // lưu dữ liệu dưới local
         localStorage.setItem("users", JSON.stringify(this.users));
-        this.username = '';
-        this.password = '';
-        this.password2 = '';
-        this.email = '';
-        this.fullName = '';
-        this.address = '';
-        this.$router.push('/login')
+        this.username = "";
+        this.password = "";
+        this.password2 = "";
+        this.email = "";
+        this.fullName = "";
+        this.address = "";
+        this.$router.push("/login");
       }
     },
   },
