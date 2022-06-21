@@ -8,7 +8,7 @@
               <h1>Register</h1>
             </div>
             <div class="card-body">
-              <form novalidate @submit.prevent="registerUser">
+              <form novalidate @submit.prevent="registerUser()">
                 <div class="form-group">
                   <input
                     type="text"
@@ -146,14 +146,15 @@ export default {
         }
 
         this.users.push(user);
-        // lữu dữ liệu dưới local
-        localStorage.setItem("user", JSON.stringify(this.users));
+        // lưu dữ liệu dưới local
+        localStorage.setItem("users", JSON.stringify(this.users));
         this.username = '';
         this.password = '';
         this.password2 = '';
         this.email = '';
         this.fullName = '';
         this.address = '';
+        this.$router.push('/login')
       }
     },
   },

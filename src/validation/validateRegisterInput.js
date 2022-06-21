@@ -1,7 +1,7 @@
 import validator from 'validator';
 
 const validateRegisterInput = (data) => {
-    const errors = {}
+    let errors = {}
 
     const {username, password, password2, email, fullName, address} = data
 
