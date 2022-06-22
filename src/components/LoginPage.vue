@@ -5,7 +5,7 @@
         <div class="col-sm-12 col-md-8 col-lg-6">
           <div class="card">
             <div class="card-header">
-              <div class="card-title">Login User</div>
+              <h1>Login User</h1>
             </div>
             <div class="card-body">
               <form novalidate @submit.prevent="loginUser">
@@ -102,5 +102,11 @@ export default {
   justify-content: center;
   align-items: center;
   height: 80vh;
+}
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
 }
 </style>
