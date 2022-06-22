@@ -82,7 +82,7 @@ export default {
               (user) => user.username === account.username
             );
             localStorage.setItem("activeUser", JSON.stringify(activeUser));
-            this.$router.push("/dashboard");
+            this.$router.push("/homepage");
             window.location.reload();
           } else {
             this.errors.password = "Password does not match!";

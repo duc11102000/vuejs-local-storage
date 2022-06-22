@@ -6,24 +6,12 @@ import HomePage from '../views/HomePage.vue'
 import DashBoard from '../views/DashBoard.vue'
 
 Vue.use(VueRouter);
-function guest (to, from, next) {
-  if(localStorage.activeUser) {
-    next({ name: "Dashboard" });
-  }else next();
-}
-
-function guard (to, from, next) {
-  if (localStorage.activeUser) {
-    next();
-  } else next ({name: "Login"})
-}
 
 const routes = [
   {
     path: "/",
     name: "Login",
     component: LoginPage,
-    beforeEnter: guest
   },
   {
     path: "/homepage",
@@ -34,19 +22,16 @@ const routes = [
     path: "/register",
     name: "Register",
     component: RegisterPage,
-    beforeEnter: guest
   },
   {
     path: "/login",
     name: "Login",
     component: LoginPage,
-    beforeEnter: guest
   },
   {
     path: "/dashboard",
     name: "Dashboard",
     component: DashBoard,
-    beforeEnter: guard
   },
 ];
 
