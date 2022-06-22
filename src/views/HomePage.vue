@@ -13,7 +13,7 @@
                         <div class="col-sm-6 col-md-5">
                           <div class="about-img">
                             <img
-                              src="../assets/logo.png"
+                              src="../assets/image.jpeg"
                               class="img-fluid rounded b-shadow-a"
                               alt=""
                             />
@@ -147,6 +147,15 @@ h1 {
   position: absolute;
   top: 50%;
 } */
+
+.about-me p{
+  font-size: 25px;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+}
 
 .about-mf .box-shadow-full {
   padding-top: 4rem;

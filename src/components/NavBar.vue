@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <router-link class="navbar-brand" to="/homepage" v-if="user">LOGO</router-link>
+      <router-link class="navbar-brand" to="/homepage" v-if="user"><img src="../assets/logo.png" alt=""></router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -56,3 +56,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.navbar-brand img{
+  width: 50px;
+  height: 50px;
+}
+</style>
