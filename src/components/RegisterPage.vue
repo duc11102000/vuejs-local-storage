@@ -116,6 +116,7 @@ export default {
       email: "",
       fullName: "",
       address: "",
+      gender: "male",
       errors: {},
       users: [],
     };
@@ -128,6 +129,7 @@ export default {
         password: this.password,
         password2: this.password2,
         email: this.email,
+        gender: this.gender,
         fullName: this.fullName,
         address: this.address,
       };
