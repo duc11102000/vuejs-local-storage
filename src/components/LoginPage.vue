@@ -34,6 +34,9 @@
                 <button class="btn btn-outline-success form-control">
                   Login
                 </button>
+                <div class="registerRoute">
+                  <p class="message">Not registered? <router-link to="/register">Create an account</router-link></p>
+                </div>
               </form>
             </div>
           </div>
@@ -108,5 +111,12 @@ export default {
   justify-content: center;
   align-content: center;
   border: none;
+}
+
+.registerRoute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
 </style>

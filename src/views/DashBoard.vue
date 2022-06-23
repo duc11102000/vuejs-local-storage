@@ -1,5 +1,5 @@
 <template>
-  <h1>dashboard</h1>
+  <h1>Not implement yet :)</h1>
 </template>
 
 <script>
