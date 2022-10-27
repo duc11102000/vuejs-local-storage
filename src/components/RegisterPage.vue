@@ -73,26 +73,6 @@
                   />
                   <div class="invalid-feedback">{{ errors.address }}</div>
                 </div>
-                <div class="genderCheckBox">
-                  <div class="form-check-inline">
-                    <label class="form-check-label">
-                      <input
-                        type="radio"
-                        class="form-check-input"
-                        checked
-                      />Male
-                    </label>
-                  </div>
-                  <div class="form-check-inline">
-                    <label class="form-check-label">
-                      <input
-                        type="radio"
-                        class="form-check-input"
-                        name="optradio"
-                      />Female
-                    </label>
-                  </div>
-                </div>
                 <button class="btn btn-outline-success form-control">
                   Register
                 </button>

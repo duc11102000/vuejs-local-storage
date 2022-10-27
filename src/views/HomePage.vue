@@ -65,7 +65,7 @@
                           ></div>
                         </div>
                         <span>JAVASCRIPT</span>
-                        <span class="pull-right">60%</span>
+                        <span class="pull-right"> 60%</span>
                         <div class="progress">
                           <div
                             class="progress-bar"
@@ -85,7 +85,7 @@
                         </div>
                         <p class="lead">
                           My name is Nguyễn Hữu Đức. I currently study in HUTECH
-                          university and in a internship duration in TMA
+                          university and completed the internship duration in TMA
                           solutions.
                         </p>
                         <p class="lead">
@@ -94,7 +94,7 @@
                           Bootstrap, Jquery.
                         </p>
                         <p class="lead">
-                          With my knowledge and skill gained during internship
+                          With my knowledge and skill gained after the internship
                           and school, i am very confident with my skill to
                           become front-end developer.
                         </p>
